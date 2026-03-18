@@ -10970,3 +10970,218 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Custom portfolio styling */
+:root {
+  --portfolio-bg: #f4f7fb;
+  --portfolio-surface: #ffffff;
+  --portfolio-primary: #0f4c81;
+  --portfolio-secondary: #1f2937;
+  --portfolio-accent: #f4a259;
+  --portfolio-text: #2f3a4a;
+  --portfolio-border: #d6e0eb;
+}
+
+body {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: var(--portfolio-text);
+  background: radial-gradient(circle at 12% 10%, #d8e8fb 0%, #f4f7fb 28%, #f4f7fb 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subheading {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  text-transform: none;
+  color: var(--portfolio-secondary);
+}
+
+.bg-primary {
+  background: linear-gradient(180deg, #0f4c81 0%, #163b5d 100%) !important;
+}
+
+.text-primary {
+  color: var(--portfolio-primary) !important;
+}
+
+.social-icons .social-icon {
+  background-color: var(--portfolio-secondary);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-icons .social-icon:hover {
+  background-color: var(--portfolio-primary);
+  transform: translateY(-3px);
+}
+
+section.resume-section {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-section .resume-section-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 100%);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 12px 28px rgba(15, 76, 129, 0.08);
+}
+
+.hero-kicker {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background-color: rgba(15, 76, 129, 0.12);
+  color: var(--portfolio-primary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-weight: 700;
+}
+
+.hero-tagline {
+  max-width: 38rem;
+  font-size: 1.15rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+}
+
+.project-card {
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 1rem;
+  padding: 1.4rem;
+  box-shadow: 0 10px 20px rgba(22, 59, 93, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 28px rgba(22, 59, 93, 0.12);
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-stack {
+  color: var(--portfolio-primary);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--portfolio-primary);
+}
+
+.project-links a[aria-disabled="true"] {
+  background-color: #8896a5;
+  pointer-events: none;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 0.95rem;
+  padding: 1.2rem;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #edf3fa;
+  color: #1f2937;
+  border: 1px solid #d9e5f1;
+  border-radius: 999px;
+  padding: 0.33rem 0.72rem;
+  font-weight: 600;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--portfolio-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-list a:hover {
+  color: var(--portfolio-accent);
+}
+
+@media (max-width: 991px) {
+  section.resume-section {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem;
+  }
+
+  .hero-section .resume-section-content {
+    padding: 1.45rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.55rem;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+}
